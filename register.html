@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide-In Menu</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url(backsite.jpg);
+      }
+
+      .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #ddd;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+      .sidebar a {
+        padding: 15px 25px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+        color: white;
+      }
+
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 30px;
+        margin-left: 50px;
+      }
+
+      .content {
+        margin-left: 0;
+        transition: margin-left 0.5s;
+        padding: 20px;
+      }
+
+     
+      #menuIcon {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1;
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      .features {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-around; 
+      }
+
+      .feature {
+        flex: 0 1 calc(33.33% - 20px); 
+        margin: 20px; 
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background: linear-gradient(45deg, #fff 50%, #ddd 50%);
+        transition: transform 0.3s; 
+       
+      }
+
+      .feature h3 {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+
+      .feature p {
+        font-size: 18px;
+      }
+
+      .feature h3 {
+        font-size: 24px;
+        margin: 10px 0;
+        color: #333;
+        
+      }
+
+      .feature p {
+        font-size: 18px;
+      
+      }
+
+    
+      .feature:hover {
+        transform: scale(1.05); 
+        cursor: pointer; /
+      }
+      a{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar" id="mySidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <a href="#">Profile</a>
+    </div>
+
+    <div class="content" id="main">
+      <span id="menuIcon" onclick="openNav()">&#9776;</span>
+      <h1>Welcome to P.T.A</h1>
+      <p>Unite the excellence</p>
+      <div class="features">
+        <div class="feature">
+          <a href=""> 
+            <h3>view profile</h3>
+            <p></p>
+          </a>
+        </div>
+  
+        <div class="feature">
+          <a href=""> 
+            <h3>Enter marks</h3>
+            <p></p>
+          </a>
+        </div>
+  
+        <div class="feature">
+          <a href=""> 
+            <h3>Enter Attendance</h3>
+            <p></p>
+          </a>
+        </div>
+  
+      
+        <div class="feature">
+          <a href=""> 
+            <h3>View Attendance</h3>
+            <p></p>
+          </a>
+        </div>
+  
+        <div class="feature">
+          <a href="">
+            <h3>View Student details</h3>
+            <p> </p>
+          </a>
+        </div>
+  
+        <div class="feature">
+          <a href="botlog.html"> 
+            <h3>back to home 3</h3>
+            <p></p>
+          </a>
+        </div>
+      </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </body>
+</html>
