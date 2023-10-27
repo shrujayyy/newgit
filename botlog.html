@@ -1,342 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+    <title>PTA Website</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Font1|Font2&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <style>
-      body,
-      h1,
-      h2,
-      p {
-        margin: 0;
-        padding: 0;
-      }
-      .full-screen {
-        font-family: Arial, sans-serif;
-        background-image: url(blur2.jpg);
-        color: #333;
-        background-repeat: no-repeat;
-        width: 100vw;
-        padding: 20px;
-  height: 100vh; 
-      }
-      .full-screen {
-        height: 100vh;
-      }
-      header {
-        background-color: #7098da;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-      .header-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+        .full-screen {
+            background-image: url(blur2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #333;
+            padding: 20px;
+            width: 100%;
+        }
 
-      h1 {
-        font-size: 36px;
-      }
+        header {
+            background-color: #1355c0;
+            color: #fff;
+            padding: 0;
+            text-align: center;
+        }
 
-      nav ul {
-        list-style: none;
-      }
+        .header-container {
+            max-width: 100%;
+            margin: 0;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-      nav li {
-        display: inline;
-        margin-right: 20px;
-      }
+        h1 {
+            margin: 20px 0px;
+        }
 
-      nav a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-        transition: color 0.3s;
-      }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-      nav a:hover {
-        color: #ff6600;
-      }
-      .hero {
-        text-align: center;
-        padding: 100px 0;
-        color:whitesmoke;
-      }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-      h2 {
-        font-size: 48px;
-        margin-bottom: 20px;
-      }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
-      .hero p {
-        font-size: 24px;
-        margin-bottom: 30px;
-      }
+        nav a:hover {
+            color: #ff6600;
+        }
 
-      .hero-button:hover {
-        background-color: #e65200;
-      }
-.feature i {
-  font-size: 24px;
-  margin-right: 10px; 
-  color: #0078d4; 
-}
+        .hero {
+            text-align: center;
+            padding: 20px 0;
+            color: rgb(215, 39, 39);
+        }
 
-      .features {
-        display: flex;
-        flex-wrap: nowrap; 
-        justify-content: space-around; 
-      }
+        .title {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
 
-      .feature {
-        flex: 0 1 calc(33.33% - 20px); 
-        margin: 20px; 
-        padding: 50px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        background: linear-gradient(45deg, #fff 50%, #ddd 50%);
-      }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
 
-      .feature h3 {
-        font-size: 24px;
-        margin: 10px 0;
-      }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
 
-      .feature p {
-        font-size: 22px;
-        font: weight 50px;
-      }
+        .feature {
+            flex: 0 1 calc(33.33% - 20px);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background: linear-gradient(45deg, #fff 50%, #ddd 50%);
+        }
 
-      .about {
-        background-color: #f7f7f7   ;
-        padding: 80px;
-        text-align: left;
-        position: relative;
-        height: 100vh;
-        background-repeat: no-repeat;
-      }
+        .feature h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
 
-      .about h2 {
-        font-size: 36px;
-      }
+        .feature p {
+            font-size: 22px;
+            font-weight: 500;
+        }
 
-      .about p {
-        font-size: 20px;
-        margin-top: 20px;
-      }
+        .about {
+            background-color: #f7f7f7;
+            padding: 80px;
+            text-align: left;
+        }
 
-     
+        .about h2 {
+            font-size: 36px;
+        }
 
-.image-section {
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  height: 100vh; 
-    background-color: #f7f7f7;
-    transition: all 0.3s;
-}
+        .about p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
 
-.image-container {
-  flex: 1;
-  text-align: center;
-}
+        .image-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
 
-.image-container img {
-  max-width: 100%; 
-  height: auto; 
-  margin: 10px;
-  border-radius: 10px; /* Apply rounded corners */
-}
-.image-3{
-  max-width: 1500px; 
-  height: auto; 
-  margin: 10px;
-}
-.feature-image{
-  max-width: 300px; 
-  height: auto; 
-  margin: 10px;
-  background-color: #7098da;
-}
-.image-5{
-  max-width: 200px; 
-  height: auto; 
-  margin: 10px;
-}
-.description-container {
-  flex: 1;
-  text-align: right;
-  padding: 20px;
-}
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
 
-.description-container h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  text-align: right;
-}
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+        }
 
-.description-container p {
-  font-size: 18px;
-  margin-bottom: 10px;
-  text-align: right;
-}
+        .description-container {
+            flex: 1;
+            text-align: left;
+            padding: 40px;
+        }
 
-.feature-image img {
-width: 100%; 
-  height: 100%; 
-  margin: 10px;
-}
+        .description-container h2 {
+            margin-bottom: 10px;
+        }
 
-  .about-features {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  height: 100vh; 
-    background: linear-gradient(45deg, #f7f7f7 50%, #ddd 50%);
-    transition: all 0.3s;
-  }
+        .description-container p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
 
-  /* Style for the "feature-image" */
-  .feature-image img {
-    max-width: 300px;
-    height: auto;
-    margin: 10px;
-    transition: all 0.3s;
-  }
-  .feature-text {
-    flex: 1;
-    padding: 20px;
-    text-align: right;
-    transition: all 0.3s;
-  }
-  .feature-text h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    text-align: right;
-  }
+        .read-more {
+            text-decoration: none;
+            color: #0078d4;
+            font-weight: bold;
+            transition: color 0.3s;
+            margin-top: 10px;
+            display: inline-block;
+            margin-left: 20px;
+        }
 
-  .feature-text p {
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-align: right;
-  }
-  .read-more {
-  text-decoration: none;
-  color: #0078d4;
-  font-weight: bold;
-  transition: color 0.3s;
-  margin-top: 10px; 
-  display: inline-block;
-  margin-left: 20px; 
-}
-
-.read-more:hover {
-  color: #e65200; 
-}
-
-
-
-
-
+        .read-more:hover {
+            color: #e65200;
+        }
     </style>
-    <title>PTA Website</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
     <header>
-      <div class="header-container">
-        <h1>Parent's Teacher's Association</h1>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#Aboutus">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header-container" id="home">
+            <h1>Parent's Teacher's Association</h1>
+            <nav>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about_website">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="full-screen">
-      <div class="hero">
-        <h2>Welcome to PTA</h2>
-        <p>Join us in supporting students' education</p>
-      </div>
-
-      <div class="features">
-        <div class="feature">
-          <h3><i class="icon fa fa-graduation-cap"></i>Parent and Teacher collabration</h3>
-          <p> PTAs promote collaboration and communication between parents and teachers. </p>
-          <a href="#Aboutus" class="read-more">Read More</a>
+        <div class="hero">
+            <h2 class="title">Welcome to PTA</h2>
+            <h4>Join us in supporting student's education</h4>
         </div>
 
-        <div class="feature">
-          <h3><i class="icon fa fa-university"></i>Support for Education</h3>
-          <p> PTAs often organize various activities and initiatives to support the educational institution.</p>
-          <a href="#Aboutus" class="read-more">Read More</a>
-        </div>
+        <div class="features">
+            <div class="feature">
+                <h3>
+                    <i class="icon fa fa-graduation-cap"></i>&nbsp;Parent and Teacher
+                    collabration
+                </h3>
+                <p>
+                    PTAs promote collaboration and communication between parents and
+                    teachers.
+                </p>
+            </div>
 
-        <div class="feature">
-          <h3><i class="icon fa fa-globe"></i>Community Engagement</h3>
-          <p> PTAs often extend their efforts to engage the broader community. </p>
-          <a href="Aboutus"class="read-more">Read More</a>
+            <div class="feature">
+                <h3>
+                    <i class="icon fa fa-university"></i>&nbsp;Support for Education
+                </h3>
+                <p>
+                    PTAs often organize various activities and initiatives to support
+                    the educational institution.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3><i class="icon fa fa-globe"></i>&nbsp;Community Engagement</h3>
+                <p>
+                    PTAs often extend their efforts to engage the broader community.
+                </p>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="image-section">
-      <div class="image-container">
-        <div class="image-3">
-          <img src="3.jpg" alt="Image 1" />
+
+    <div class="section" id="about_website">
+        <div class="container section_container">
+            <div class="block section_title">
+                <h1 class="section_title">About Our Website</h1>
+            </div>
+            <div class="flex pb-4">
+
+                <div class="image-container">
+                    <div class="image-3">
+                        <img src="discuss.jpg" alt="Image 1" />
+                    </div>
+                </div>
+
+                <div class="description-container">
+                    <div class="">
+                        <h3>A Few Words About Our Website</h3>
+                    </div>
+                    <div class="">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rem
+                            iusto voluptate ipsa? Tempora, voluptatem necessitatibus mollitia,
+                            consequuntur omnis illo impedit, quia similique corporis
+                            voluptatibus deleniti incidunt consequatur autem ipsam?
+                        </p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
         </div>
-       </div>
-      <div class="description-container">
-        <h2>A few words abour our Association</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rem iusto voluptate ipsa? Tempora, voluptatem necessitatibus mollitia, consequuntur omnis illo impedit, quia similique corporis voluptatibus deleniti incidunt consequatur autem ipsam?</p>
-        <p></p>
-        <p></p>
-      </div>
     </div>
-  </div>
-  
 
-    <div class="about" id="Aboutus">
-      <div>
-        <h2>About P.T.A</h2>
-        <p>The Parent’s Teacher’s Association Website is an integral and</p>
-        <p>
-          exclusive component of College infrastructure, serving as the central
-        </p>
-        <p>hub for managing student data and enabling seamless</p>
-        <p>communication among administrators, teachers,</p>
-        <p>and parents within our college community.</p>
-        <p>
-          This dedicated platform is tailored to meet the specific needs and
-          objectives of College,
-        </p>
-        <p>
-          providing a comprehensive solution for efficient data management,
-          communication,
-        </p>
-        <p>
-          and enhancing the overall educational experience for our students.
-        </p>
-      </div>
+    <div class="section" id="features">
+        <div class="container section_container">
+            <div class="block section_title">
+                <h1 class="section_title">Features of Our Website</h1>
+            </div>
+            <div class="flex">
+                <div class="description-container">
+                    <div class="desc_title">
+                        <h2>PTA Features</h2>
+                    </div>
+                    <div class="features_list">
+                        <dl class="features_ul">
+                            <dt>Student Information Management</dt>
+                            <dd>This feature allows administrators to manage student information, including enrollment,
+                                updates, and deletions. </dd>
+                            <dt>Teacher Information Management </dt>
+                            <dd>This feature enables administrators to manage teacher information, including adding,
+                                updating, or deleting teacher records.</dd>
+                            <dt>Attendance Tracking System</dt>
+                            <dd>This feature enables teachers to track the attendance of students for various classes
+                                and sessions.</dd>
+                            <dt>Academic Performance Tracking</dt>
+                            <dd>This feature allows teachers to record and track the academic performance of students,
+                                including test scores, grades, and assessments.</dd>
+                            <dt>Fee Status System</dt>
+                            <dd>This feature allows parents to view the college balance fee amount.</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <div class="image-3">
+                        <img src="features.jpg" alt="Image 1" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  
 
-    <footer>
-      <p>&copy; 2023 Your College. All rights reserved.</p>
-    </footer>
-  </body>
+    <div class="container w-100">
+        <footer class="py-1 my-2">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#home" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact Us</a></li>
+                <li class="nav-item"><a href="#about_website" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">&copy; 2023 Parent's Teacher's Association</p>
+        </footer>
+    </div>
+</body>
+
 </html>
