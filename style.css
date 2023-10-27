@@ -1,0 +1,35 @@
+.section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block {
+    display: block;
+}
+
+.section_container{
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(247, 247, 247);
+}
+
+.section_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features_ul {
+    list-style-type: square;
+    font-size: 18px;
+}
+
